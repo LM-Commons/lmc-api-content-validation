@@ -2,11 +2,11 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          bootstrap="./vendor/autoload.php"
          colors="true"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.5/phpunit.xsd"
          cacheDirectory=".phpunit.cache"
          displayDetailsOnTestsThatTriggerWarnings="true"
 >
-  <testsuite name="Put a meaningful name here">
+  <testsuite name="Lmc API Content Validation Test Cases">
     <directory>./test</directory>
   </testsuite>
   <source>

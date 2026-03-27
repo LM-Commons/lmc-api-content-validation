@@ -1,34 +1,43 @@
 {
-  "name": "lm-commons/repository-template",
-  "description": "Repository template",
+  "name": "lm-commons/lmc-api-content-validation",
+  "description": "API Tools for validating content",
   "license": "BSD-3-Clause",
   "authors": [
     {
-      "name": "Firstname Lastname",
-      "email": "email@example.com"
+      "name": "Eric Richer",
+      "email": "eric.richer@vistoconsulting.com"
     }
   ],
   "require": {
-    "php": "~8.2.0 || ~8.3.0 || ~8.4.0"
+    "php": "~8.3.0 || ~8.4.0 || ~8.5.0"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.1",
-    "phpunit/phpunit": "^11.5",
+    "phpunit/phpunit": "^12.5",
     "psalm/plugin-phpunit": "^0.19.5",
-    "vimeo/psalm": "^6.10"
+    "vimeo/psalm": "^6.16"
   },
   "autoload": {
-
+    "psr-4": {
+      "Lmc\\Api\\ContentValidation\\": "src/"
+    }
   },
   "autoload-dev": {
-
+    "psr-4": {
+      "LmcTest\\Api\\ContentValidation\\": "test/"
+    }
   },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     },
     "platform": {
-      "php": "8.2.99"
+      "php": "8.3.99"
+    }
+  },
+  "extra": {
+    "laminas": {
+      "config-provider": "Lmc\\Api\\ContentValidation\\ConfigProvider"
     }
   },
   "scripts": {
