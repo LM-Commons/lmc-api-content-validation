@@ -1,3 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.25.0@01a8eb06b9e9cc6cfb6a320bf9fb14331919d505">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
+  <file src="src/ContentValidationMiddleware.php">
+    <InvalidArgument>
+      <code><![CDATA[[$inputFilter]]]></code>
+    </InvalidArgument>
+    <InvalidReturnStatement>
+      <code><![CDATA[$this->inputFilterPluginManager->get($inputFilterService)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[InputFilterInterface|InputFilter|string]]></code>
+    </InvalidReturnType>
+    <LessSpecificReturnType>
+      <code><![CDATA[object|array|null]]></code>
+    </LessSpecificReturnType>
+    <MixedArgument>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$fields]]></code>
+      <code><![CDATA[$identifierName]]></code>
+    </MixedArgument>
+    <MixedArrayAccess>
+      <code><![CDATA[$this->config[$routeMatchedName][$method . '_COLLECTION']]]></code>
+      <code><![CDATA[$this->config[$routeMatchedName][$method]]]></code>
+      <code><![CDATA[$this->config[$routeMatchedName]['input_filter']]]></code>
+      <code><![CDATA[$this->restConfig[$routeMatchedName]['route_identifier_name']]]></code>
+    </MixedArrayAccess>
+    <MixedAssignment>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$fields]]></code>
+      <code><![CDATA[$identifierName]]></code>
+    </MixedAssignment>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->config[$routeMatchedName][$method . '_COLLECTION']]]></code>
+      <code><![CDATA[$this->config[$routeMatchedName][$method]]]></code>
+      <code><![CDATA[$this->config[$routeMatchedName]['input_filter']]]></code>
+    </MixedReturnStatement>
+    <PossiblyFalseArgument>
+      <code><![CDATA[$routeMatchedName]]></code>
+    </PossiblyFalseArgument>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$compareTo]]></code>
+      <code><![CDATA[$compareTo]]></code>
+      <code><![CDATA[$compareTo]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$tmpValue]]></code>
+    </PossiblyInvalidArgument>
+    <PossiblyInvalidMethodCall>
+      <code><![CDATA[getMessages]]></code>
+      <code><![CDATA[getValues]]></code>
+      <code><![CDATA[isValid]]></code>
+      <code><![CDATA[setData]]></code>
+    </PossiblyInvalidMethodCall>
+    <PossiblyNullArgument>
+      <code><![CDATA[$identifierName]]></code>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$routeMatchedName]]></code>
+    </PossiblyNullArgument>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[empty($compareTo)]]></code>
+      <code><![CDATA[empty($data)]]></code>
+    </RiskyTruthyFalsyComparison>
+  </file>
 </files>

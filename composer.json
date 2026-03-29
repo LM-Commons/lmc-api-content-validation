@@ -9,7 +9,12 @@
     }
   ],
   "require": {
-    "php": "~8.3.0 || ~8.4.0 || ~8.5.0"
+    "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
+    "laminas/laminas-inputfilter": "^2.35",
+    "laminas/laminas-stdlib": "^3.21",
+    "lm-commons/lmc-api-problem": "1.0.x-dev",
+    "mezzio/mezzio-router": "^3.7",
+    "psr/http-server-middleware": "^1.0"
   },
   "require-dev": {
     "laminas/laminas-coding-standard": "^3.1",
@@ -51,5 +56,11 @@
     "cs-fix": "phpcbf",
     "test-coverage-html": "phpunit --coverage-html ./build/html",
     "static-analysis": "psalm --shepherd --stats"
-  }
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/lm-commons/lmc-api-problem.git"
+    }
+  ]
 }
