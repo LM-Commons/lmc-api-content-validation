@@ -16,11 +16,17 @@ final class ConfigProvider
 
     private function getDependencies(): array
     {
-        return [];
+        return [
+            'factories' => [
+                ContentValidationMiddleware::class => ContentValidationMiddlewareFactory::class,
+            ],
+        ];
     }
 
     private function getLmcApiConfig(): array
     {
-        return [];
+        return [
+            'content_validation' => [],
+        ];
     }
 }
