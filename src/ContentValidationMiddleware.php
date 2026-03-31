@@ -225,7 +225,7 @@ final class ContentValidationMiddleware implements MiddlewareInterface
         if (null !== $request->getAttribute($identifierName)) {
             return false;
         }
-        return null === $request->getQueryParams()[$routeMatchedName];
+        return ! isset($request->getQueryParams()[$routeMatchedName]);
     }
 
     private function hasInputFilter(string $inputFilterService): bool
