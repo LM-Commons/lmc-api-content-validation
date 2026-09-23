@@ -110,10 +110,9 @@ final class ContentValidationMiddleware implements MiddlewareInterface
             $inputFilter = $collectionInputFilter;
         }
 
-        $request = $request->withAttribute(InputFilter::class, $inputFilter);
-
         $inputFilter->setData($data);
         $status = $inputFilter->isValid();
+        $request = $request->withAttribute(InputFilterInterface::class, $inputFilter);
         /*
         $status = $request->getMethod() === 'PATCH'
             ? $this->validatePatch($inputFilter, $data, $isCollection)
